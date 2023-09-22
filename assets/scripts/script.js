@@ -17,7 +17,7 @@ const arr = document.getElementById('array').value
 
    for(i=0; i<splitarr.length; i++){
     for(j=0; j<splitarr.length;j++){ 
-      console.log(splitarr.length);
+      console.log(splitarr.length[0]);
       // revealAns.innerHTML = arr2
       if(splitFirstNumber + splitarr[i] === splitSecondNumber + splitarr[j]){
         return splitarr[i], splitarr[j]
