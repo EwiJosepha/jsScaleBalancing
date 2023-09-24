@@ -16,24 +16,18 @@ function scaleBalance() {
   //  console.log(arr2);
   for (let i = 0; i < splitarr.length; i++) {
     for (let j = 0; j < splitarr.length; j++) {
-      console.log(splitarr[i]);
-      
+      console.log(splitarr[j])
+
       // revealAns.innerHTML = arr2
       if (+splitFirstNumber + +splitarr[i] === +splitSecondNumber + +splitarr[j]) {
-
-        revealAns.innerHTML =`${+splitFirstNumber + +splitarr[i]}  ${+splitSecondNumber + +splitarr[j]}`
-
-       return;
-
-      } else {
-        revealAns.innerHTML = `${+splitFirstNumber + +splitarr[i]}  ${+splitSecondNumber + +splitarr[j]}`
-        return
+        console.log(`${splitarr[i]} ${splitarr[j]}`)
+        revealAns.innerHTML = `${splitarr[i]} ${splitarr[j]}`
+        return;
+      }
     }
   }
-  revealAns.innerHTML
-
-
-}
+  revealAns.innerHTML = "imposiible"
+  return
 }
 
 donebtn.addEventListener('click', () => {
