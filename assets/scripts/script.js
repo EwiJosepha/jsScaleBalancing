@@ -26,7 +26,6 @@ function scaleBalance () {
     }
   }
   revealAns.innerHTML = 'imposiible'
-  
 }
 
 donebtn.addEventListener('click', () => {
