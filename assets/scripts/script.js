@@ -6,35 +6,34 @@ function scaleBalance() {
   let firstnumber = document.getElementById('firstnumber').value
   const secondnumber = document.getElementById('secondnumber').value
   const arr = document.getElementById('array').value
-  const splitFirstNumber = firstnumber.split()
+  let splitFirstNumber = firstnumber.split()
   const splitSecondNumber = secondnumber.split()
   console.log(splitFirstNumber)
+  console.log(splitSecondNumber)
   splitarr = arr.split('')
   //  let arr2 =splitarr.length
   console.log(splitarr);
   //  console.log(arr2);
   for (let i = 0; i < splitarr.length; i++) {
     for (let j = 0; j < splitarr.length; j++) {
-
-      console.log(splitarr[j]);
-
-      console.log(splitFirstNumber)
-
-
+      console.log(splitarr[i]);
+      
       // revealAns.innerHTML = arr2
-      if (splitFirstNumber + splitarr[i] === splitSecondNumber + splitarr[j]) {
+      if (+splitFirstNumber + +splitarr[i] === +splitSecondNumber + +splitarr[j]) {
 
+        revealAns.innerHTML =`${+splitFirstNumber + +splitarr[i]}  ${+splitSecondNumber + +splitarr[j]}`
 
-        return splitarr[i], splitarr[j]
+       return;
+
       } else {
-        revealAns.innerHTML = "imbalanced"
+        revealAns.innerHTML = `${+splitFirstNumber + +splitarr[i]}  ${+splitSecondNumber + +splitarr[j]}`
         return
-      }
     }
   }
   revealAns.innerHTML
 
 
+}
 }
 
 donebtn.addEventListener('click', () => {
